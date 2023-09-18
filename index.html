@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>To the Power of Math!</title>
-    <!-- Styling for the client UI -->
+    <title>Temperature Converter</title>
     <style>
     h1 {
         color: #FFFFFF;
@@ -31,7 +30,7 @@
 		margin-top: 20px;
 		width: 140px;
         }
-	 input {
+	input {
         color: #0688ec;
         font-family: system-ui;
         font-size: 20px;
@@ -51,7 +50,7 @@
                 body: raw,
                 redirect: 'follow'
             };
-            fetch("YOUR API GATEWAY ENDPOINT", requestOptions)
+            fetch("https://vnwksqksdb.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
             .then(response => response.text())
             .then(result => alert(JSON.parse(result).body))
             .catch(error => console.log('error', error));
